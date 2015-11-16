@@ -1,0 +1,76 @@
+<include file="Public:header" />
+<include file="Public:left" />
+<div class="content">
+
+    <!--<a href="{:U('Drive/regDrive')}">申请设备</a>-->
+    <!--<a href="{:U('Drive/refreshDrive')}">刷新设备</a>-->
+
+    <div class="margin-l15">
+        <h2>设备列表</h2>
+        <blockquote>
+            <p class="font14 darkcyan">如果您没有设备,可以通过左上角的申请按钮申请设备。<br>
+                设备需要第一次进行激活，激活完的设备才可以和页面进行绑定哦！<br>
+                如果您还没有设置页面可以去右侧的页面选项卡中进行设置。</p>
+        </blockquote>
+        <div class="row margin-l15  margin-t15px float-r">
+            <a class="btn btn-info" href="{:U('RedPackets/addRedPacket')}">创建红包</a>
+        </div>
+
+
+<table class="table">
+    
+    <tr>
+        <th>ID</th>
+        <th>商户订单号</th>
+        <!--<th>.mch_id</th>-->
+        <!--<th>.wxappid</th>-->
+        <th>红包类型</th>
+        <th>总金额</th>
+        <th>红包发放总人数</th>
+        <!--<th>.amt_type</th>-->
+        <th>红包祝福语</th>
+        <th>活动名称</th>
+        <th>备注</th>
+        <!--<th>.auth_mchid</th>-->
+        <!--<th>.auth_appid</th>-->
+        <!--<th>.risk_cntl</th>-->
+        <!--<th>.nonce_str</th>-->
+        <!--<th>.uid</th>-->
+        <!--<th>.sign</th>-->
+        <th>创建时间</th>
+        <!--<th>.sp_ticket</th>-->
+        <th>红包订单号</th>
+        <!--<th>发送时间</th>-->
+    </tr>
+
+    <volist id="list" name="list">
+
+        <tr>
+            <td>{$list.id}</td>
+            <td>{$list.mch_billno}</td>
+            <!--<td>{$list.mch_id}</td>-->
+            <!--<td>{$list.wxappid}</td>-->
+            <td>
+                {$list['hb_type'] == 'NORMAL' ? '普通红包':''}
+                {$list['hb_type'] == 'GROUP' ? '裂变红包':''}
+            </td>
+            <td>{$list.total_amount}</td>
+            <td>{$list.total_num}</td>
+            <!--<td>{$list.amt_type}</td>-->
+            <td>{$list.wishing}</td>
+            <td>{$list.act_name}</td>
+            <td>{$list.remark}</td>
+            <!--<td>{$list.auth_mchid}</td>-->
+            <!--<td>{$list.auth_appid}</td>-->
+            <!--<td>{$list.risk_cntl}</td>-->
+            <!--<td>{$list.nonce_str}</td>-->
+            <!--<td>{$list.uid}</td>-->
+            <!--<td>{$list.sign}</td>-->
+            <td>{$list.addtime|date='Y-m-d H:i:s',###}</td>
+            <!--<td>{$list.sp_ticket}</td>-->
+            <td>{$list.detail_id}</td>
+            <!--<td>{$list.send_time}</td>-->
+        </tr>
+    </volist>
+    </table>
+        </div></div>

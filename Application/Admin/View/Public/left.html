@@ -1,0 +1,64 @@
+<body>
+		<div class="left col-md-2" style="padding:0px;margin: 0px;">
+			<div class="center a_logo">
+				<img class="logo_a" src="__PUBLIC__/image/logo.png">
+			</div>
+			<ul class="left-nav" >
+				<li>
+					<i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>
+					<a href="{:U('Index/index')}">首页</a>
+					<!-- <span class='size10 glyphicon glyphicon-minus'></span> -->
+				</li>
+				<li class="active down-level"><i class="glyphicon glyphicon-hdd" style="font-size:13px;margin:0 10px;"></i>设备管理<span class="size10 glyphicon glyphicon-plus " aria-hidden="true"></span>
+				</li>
+				<ul class="left-nav1" style="display:show;z-index: 99999999">
+					<li class="size10">
+						<i class="glyphicon glyphicon-align-left" style="font-size:13px;margin:0 10px;"></i>
+						<a href="{:U('Drive/index')}">设备列表</a>
+					</li>
+					<li class="size10">
+						<i class="glyphicon glyphicon-log-in" style="font-size:13px;margin:0 10px;"></i>
+						<a href="{:U('Drive/regDrive')}">申请设备</a>
+					</li>
+				</ul>
+				<li class="down-level"><i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>卡券管理<span class="size10 glyphicon glyphicon-plus " aria-hidden="true"></span>
+				</li>
+					<ul class="left-nav1" style="display:none;z-index: 99999999">
+						<li class="size10">创建卡券</li>
+						<li class="size10">删除卡券</li>
+					</ul>			
+				<li class="down-level"><i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>商户管理<span class="size10 glyphicon glyphicon-plus " aria-hidden="true"></span></li>
+					<ul class="left-nav1" style="display:none;z-index: 99999999">
+						<li class="size10">创建卡券</li>
+						<li class="size10">删除卡券</li>
+					</ul>
+				<li class="down-level"><i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>卡券核销<span class="size10 glyphicon glyphicon-plus " aria-hidden="true"></span></li>
+					<ul class="left-nav1" style="display:none;z-index: 99999999">
+						<li class="size10">创建卡券</li>
+						<li class="size10">删除卡券</li>
+					</ul>
+				<li class="down-level"><i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>主题活动<span class="size10 glyphicon glyphicon-plus " aria-hidden="true"></span></li>
+					<ul class="left-nav1" style="display:none;z-index: 99999999">
+						<li class="size10">创建卡券</li>
+						<li class="size10">删除卡券</li>
+					</ul>
+				<li>
+					<i class="glyphicon glyphicon-home" style="font-size:13px;margin:0 10px;"></i>
+					<a href="{:U('Index/setConfig')}">系统设置</a>
+					<!-- <span class='size10 glyphicon glyphicon-minus'></span> -->
+				</li>
+			</ul>
+			<!-- <div class="phone">
+				<p>72小时客户服务</p>
+				<p>400-6767-235</p>
+			</div> -->
+		</div>
+		<div class="right col-md-10" id="right">
+				<div class="top">
+				<span class="glyphicon glyphicon-envelope"></span>
+					<select name="username" id="username">
+						<option value>用户名</option>
+						<option value="set">设置</option>
+						<option value="quit">退出</option>
+					</select>
+				</div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面管理</title>
+</head>
+<body>
+活动：
+	<ul>
+	<volist name="res" id="res">
+		<li>{$res.title}<span><a href="{:U('Page/update',array('page_id'=>$res['page_id']))}">修改</a></span><span><a href="{:U('Page/pagedel',array('id'=>$res['id']))}">删除</a></span></li>
+	</volist>
+	</ul>
+	<hr>
+	<a href="{:U('Page/add')}">添加活动</a>
+</body>
+</html>

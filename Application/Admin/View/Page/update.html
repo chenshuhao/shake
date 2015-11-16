@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改页面</title>
+</head>
+<body>
+
+<form action="{:U('Page/pageupdate')}" method="post"  enctype="multipart/form-data">
+	
+	<h1>修改页面</h1>
+	主标题：<input type="text" name="title" value="{$res.title}"><br>
+	副标题：<input type="text" name="description" value="{$res.description}"><br>
+	跳转连接：<input type="text" name="page_url" value="{$res.page_url}"><br>
+	图片：
+	<img src="{$res.icon_url}">
+<input multiple="multiple" type="file" name="img" >
+
+	（在摇一摇页面展示的图片。图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处）<br>
+	页面的备注信息：<input type="text" name="comment" value="{$res.comment}">不超过15个汉字或30个英文字母<br>
+	
+	
+
+	<input type="submit" value="提交">
+</form>
+</body>
+
+</html>

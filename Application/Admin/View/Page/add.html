@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面管理</title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+<form action="{:U('Page/pageadd')}" method="post"  enctype="multipart/form-data">
+	<h1>新增页面</h1>
+	主标题：<input type="text" name="title" value=""><br>
+	副标题：<input type="text" name="description" value=""><br>
+	跳转连接：<input type="text" name="page_url" value=""><br>
+	图片：
+<input multiple="multiple" type="file" name="img" >
+
+	（在摇一摇页面展示的图片。图片需先上传至微信侧服务器，用“素材管理-上传图片素材”接口上传图片，返回的图片URL再配置在此处）<br>
+	页面的备注信息：<input type="text" name="comment" value="">不超过15个汉字或30个英文字母<br>
+	
+	
+
+	<input type="submit" value="提交">
+</form>
+</body>
+
+</html>

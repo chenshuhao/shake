@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head lang="zh-CN">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>设备信息</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #efeff4;
+
+        }
+        .mod-title{
+            text-align: center;
+            font-size: 16px;
+            line-height: 50px;
+        }
+        .mod-main{
+            border-bottom: 1px solid #dfdfdd;
+            border-top: 1px solid #dfdfdd;
+            background-color: #ffffff;
+            color: #999999;
+            padding: 15px;
+            font-size: 13px;
+        }
+        .mod-span{
+            margin-right: 20px;
+        }
+        .mod-tips{
+            color: #f43631;
+            padding-left: 15px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="mod-title">
+    设备管理-复制设备信息
+</div>
+UUID: <br>
+<div class="mod-main">
+    {$_GET['UUID']}</div>
+Major(十进制):<br>
+<div class="mod-main">
+    {$_GET['Major']}</div>
+Minor(十进制):<br>
+<div class="mod-main">
+    {$_GET['Minor']}</div>
+<div class="mod-tips">
+    提示：长按可复制设备信息
+</div>
+
+
+</body></html>
